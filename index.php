@@ -46,7 +46,7 @@
   <div class="page-content-answer">
     <div id="randomFact"></div>
   </div>
-  </main>
+    </main>
   </div>
 </body>
 
