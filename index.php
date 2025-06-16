@@ -23,22 +23,21 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">A Random Useless Fact, in PHP</span>
+        <span class="mdl-layout-title">Jokes API, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/FUNFACT.png" alt="Image of a light bulb with the words 'FUN FACT' on top of it." />
+        <img src="./images/laugh.jpg" alt="Laughing emoji" />
       </div>
-      <div class="page-content">Random Fact</div>
       <br />
       <form action="answer.php" method="GET">
         <!-- Simple Textfield for integers-->
         <form action="#">
           <!-- Accent-colored raised button with ripple -->
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="getWeather()">
-            Click for a random fact!
+            onclick="getJoke()">
+            Joke!
           </button>
         </div>
       </form>
