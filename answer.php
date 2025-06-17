@@ -30,21 +30,29 @@
       <div class="right-image">
         <img src="./images/laugh.jpg" alt="Laughing emoji" />
       </div>
-      <br />
-      <form action="answer.php" method="GET">
-        <!-- Simple Textfield for integers-->
-        <form action="#">
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            onclick="getJoke()">
-            Joke!
-          </button>
+      <div class=" page-content-php">
+        <div id="joke">
+
+          <?php
+          try {
+            $jokesJSON = "https://official-joke-api.appspot.com/random_joke";
+            $jsonJokes = file_get_contents($jokesJSON);
+            $jokeData = json_decode($jsonJokes);
+
+            $joke = $jokeData->setup;
+            $answer = $jokeData->punchline;
+
+            echo "<p>Joke: " . $joke . "<br>Answer: " . $answer . "</p>";
+          } catch (error) {
+            echo "<p>Sorry, an error has occurred. Please try again later.</p>";
+          }
+          ?>
+
         </div>
-      </form>
-    <br />
-  <div class="page-content-answer">
-    <div id="joke"></div>
-  </div>
+        <br />
+        <div class="page-content-answer">
+          <a href="./index.php">Return ...</a>
+        </div>
     </main>
   </div>
 </body>
